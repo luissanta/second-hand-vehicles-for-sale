@@ -1,26 +1,53 @@
-<div class="container-fluid">
-  <div class="col-6">
-    <table class="table" aria-describedby="tableVehicles" id="tableVehicles">
-      <thead>
+<div class="container-fluid mx-4">
+  <img
+    src="assets/images/logo.png"
+    alt="logo"
+    id="logoImage"
+    class="mt-3"
+  >
+  <hr class=""/>
+  <div class="col-8">
+    <img
+      src="assets/images/banner.png"
+      alt="banner"
+      id="bannerImage"
+    >
+  </div>
+  <hr class="mb-3"/>
+  <div class="col-8">
+    <table
+      class="table"
+      aria-describedby="tableVehicles"
+      id="tableVehicles"
+    >
+      <thead id="theadTableVehicles">
         <tr>
-          <th class="h4">Course's Name</th>
-          <th class="h4">Professor's Name</th>
-          <th class="h4">Credits</th>
+          <th class="h5">#</th>
+          <th class="h5">Marca</th>
+          <th class="h5">Linea</th>
+          <th class="h5">Modelo</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let vehicle of vehicles">
           <td>
-            <dd>{{vehicle.modelo}}</dd>
+            <dd id="vehicleId">{{vehicle.id}}</dd>
           </td>
           <td>
-            <dd>{{vehicle.color}}</dd>
+            <dd id="vehicleBrand">{{vehicle.marca}}</dd>
           </td>
           <td>
-            <dd>{{vehicle.kilometraje}}</dd>
+            <dd id="vehicleLine">{{vehicle.linea}}</dd>
+          </td>
+          <td>
+            <dd id="vehicleModel">{{vehicle.modelo}}</dd>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
+<div id="footer">
+  <p id="footerText">Contact us: +57 3102105253 - info@tusegundazo.com - @tusegundazo</p>
+</div>
+

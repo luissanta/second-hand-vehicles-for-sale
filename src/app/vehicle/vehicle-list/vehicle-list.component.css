@@ -1,0 +1,24 @@
+#vehicleId {
+  font-weight: bold;
+}
+
+#theadTableVehicles {
+  background: #333A40;
+  color: white;
+}
+
+#titlePage {
+  text-shadow: 2px 2px #333333;
+  color: black;
+}
+
+#footerText {
+  position: absolute;
+  top: 97%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#logoImage {
+  margin-bottom: -10px
+}
