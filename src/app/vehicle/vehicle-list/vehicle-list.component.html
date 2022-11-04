@@ -1,1 +1,26 @@
-<p>vehicle-list works!</p>
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table" aria-describedby="tableVehicles" id="tableVehicles">
+      <thead>
+        <tr>
+          <th class="h4">Course's Name</th>
+          <th class="h4">Professor's Name</th>
+          <th class="h4">Credits</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+          <td>
+            <dd>{{vehicle.modelo}}</dd>
+          </td>
+          <td>
+            <dd>{{vehicle.color}}</dd>
+          </td>
+          <td>
+            <dd>{{vehicle.kilometraje}}</dd>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

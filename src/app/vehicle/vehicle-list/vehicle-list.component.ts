@@ -9,12 +9,12 @@ import { VehicleService } from "../vehicle.service";
 })
 export class VehicleListComponent implements OnInit {
 
-  vehicles: Array<Vehicle> = []
-
   constructor(private vehicleService: VehicleService) { }
 
+  vehicles: Array<Vehicle> = []
+
   getVehiclesList(): void {
-    this.vehicleService.getVehicles().subscribe((vehicles) => {
+    this.vehicleService.getVehicles().subscribe(vehicles => {
       this.vehicles = vehicles
     })
   }

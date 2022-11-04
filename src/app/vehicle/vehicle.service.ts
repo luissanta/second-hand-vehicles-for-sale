@@ -9,11 +9,11 @@ import { HttpClient } from "@angular/common/http";
 })
 export class VehicleService {
 
-  constructor(private http: HttpClient) { }
-
   private apiUrl: string = environment.baseUrl
 
+  constructor(private http: HttpClient) { }
+
   getVehicles(): Observable<Vehicle[]> {
-    return this.http.get<Vehicle[]>(this.apiUrl)
+    return this.http.get<Vehicle[]>(this.apiUrl);
   }
 }
