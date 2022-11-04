@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
 
 ## Description
-
+Angular application that allows you to display second-hand vehicles for sale.
 
 ## Development server
 
