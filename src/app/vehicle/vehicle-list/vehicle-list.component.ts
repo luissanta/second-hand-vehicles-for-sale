@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Vehicle } from "../vehicle";
+import { VehicleService } from "../vehicle.service";
 
 @Component({
   selector: 'app-vehicle-list',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VehicleListComponent implements OnInit {
 
-  constructor() { }
+  vehicles: Array<Vehicle> = []
 
-  ngOnInit(): void {
+  constructor(private vehicleService: VehicleService) { }
+
+  getVehiclesList(): void {
+    this.vehicleService.getVehicles().subscribe((vehicles) => {
+      this.vehicles = vehicles
+    })
   }
 
+  ngOnInit(): void {
+    this.getVehiclesList()
+  }
 }
