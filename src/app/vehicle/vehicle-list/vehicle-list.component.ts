@@ -12,16 +12,25 @@ export class VehicleListComponent implements OnInit {
   constructor(private vehicleService: VehicleService) { }
 
   vehicles: Array<Vehicle> = []
-  brands: string = 'hola'
+  brands: Array<{name: string, amount: number}>  = []
+
+  getBrands(vehicles: Array<Vehicle> = []): void {
+    for (let vehicle of vehicles) {
+      if (!this.brands.find(brand => brand.name === vehicle.marca )) {
+        this.brands.push({name: vehicle.marca, amount: 1})
+      }
+      // else if (this.brands.find(brand => brand.name === vehicle.marca )) {
+      //   let b = this.brands.find(brand => brand.name === vehicle.marca)
+      //   b.amount = 1 + b.amount
+      // }
+    }
+  }
 
   getVehiclesList(): void {
     this.vehicleService.getVehicles().subscribe(vehicles => {
       this.vehicles = vehicles
+      this.getBrands(vehicles)
     })
-    this.brands = this.vehicles[0].marca
-    // for (let vehicle of this.vehicles) {
-    //   this.brands = vehicle.marca
-    // }
   }
 
   ngOnInit(): void {
