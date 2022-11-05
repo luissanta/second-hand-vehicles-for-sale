@@ -19,10 +19,10 @@ export class VehicleListComponent implements OnInit {
       if (!this.brands.find(brand => brand.name === vehicle.marca )) {
         this.brands.push({name: vehicle.marca, amount: 1})
       }
-      // else if (this.brands.find(brand => brand.name === vehicle.marca )) {
-      //   let b = this.brands.find(brand => brand.name === vehicle.marca)
-      //   b.amount = 1 + b.amount
-      // }
+      else {
+        let brandFind = this.brands.find(brand => brand.name === vehicle.marca) || {name: '', amount: 0}
+        brandFind.amount ++
+      }
     }
   }
 

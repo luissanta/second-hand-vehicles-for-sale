@@ -1,20 +1,4 @@
-<div class="col-7">
-  <table
-    class="table"
-  >
-    <tbody>
-    <tr *ngFor="let brand of brands">
-      <td>
-        <dd>Total {{brand.name}}: {{brand.amount}}</dd>
-      </td>
-    </tr>
-    </tbody>
-  </table>
-</div>
-
-
-
-<div class="row" id="containerPage">
+<div class="row mb-4" id="containerPage">
   <img
     src="assets/images/logo.png"
     alt="logo"
@@ -62,11 +46,8 @@
       </tbody>
     </table>
   </div>
-  <div class="col-8 mb-5">
-    <h6 class="total">Total Renault:</h6>
-    <h6 class="total">Total Chevrolet:</h6>
-    <h6>Total Nissan:</h6>
-    <h6></h6>
+  <div class="col-8" *ngFor="let brand of brands">
+    <h6 class="total">Total {{brand.name}}: {{brand.amount}}</h6>
   </div>
 </div>
 
