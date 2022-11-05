@@ -12,15 +12,15 @@
   color: black;
 }
 
-#footerText {
-  position: absolute;
-  top: 97%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#footer {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 #logoImage {
-  margin-bottom: -10px
+  max-width: 300px;
+  margin-bottom: 8px;
 }
 
 #dividerLogoAndBanner {
@@ -29,4 +29,14 @@
 
 .total {
   margin-bottom: -1px
+}
+
+#containerPage {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#bannerImage {
+  width: 100%;
+  height: auto;
 }
