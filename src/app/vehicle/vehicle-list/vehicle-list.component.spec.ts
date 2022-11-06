@@ -79,18 +79,6 @@ describe('VehicleListComponent', () => {
     });
   });
 
-  it('should have h6 with the total brand names', () => {
-    debug.queryAll(By.css('h6.total')).forEach((p, i)=>{
-      expect(p.nativeElement.textContent).toContain(component.brands[i].name)
-    });
-  });
-
-  it('should have h6 with the total brand amount', () => {
-    debug.queryAll(By.css('h6.total')).forEach((p, i)=>{
-      expect(p.nativeElement.textContent).toContain(component.brands[i].amount)
-    });
-  });
-
   it('should have footer', () =>{
     expect(fixture.debugElement.nativeElement.querySelector('#footer').textContent).toContain('Contact us: +57 3102105253 - info@tusegundazo.com - @tusegundazo');
   });
