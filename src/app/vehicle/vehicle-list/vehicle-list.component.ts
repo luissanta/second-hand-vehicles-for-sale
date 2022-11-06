@@ -16,12 +16,12 @@ export class VehicleListComponent implements OnInit {
 
   getBrands(vehicles: Array<Vehicle> = []): void {
     for (let vehicle of vehicles) {
-      if (!this.brands.find(brand => brand.name === vehicle.marca )) {
-        this.brands.push({name: vehicle.marca, amount: 1})
-      }
-      else {
+      if (this.brands.find(brand => brand.name === vehicle.marca )) {
         let brandFind = this.brands.find(brand => brand.name === vehicle.marca) || {name: '', amount: 0}
         brandFind.amount ++
+      }
+      else {
+        this.brands.push({name: vehicle.marca, amount: 1})
       }
     }
   }

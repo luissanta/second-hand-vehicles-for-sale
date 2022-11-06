@@ -1,5 +1,5 @@
 <div class="row mb-4" id="containerPage">
-  <hr id="dividerLogoAndBanner"/>
+  <hr id="dividerLogoAndBanner" class="mx-1"/>
   <div class="col-12">
     <img
       src="assets/images/banner.png"
@@ -7,7 +7,7 @@
       id="bannerImage"
     >
   </div>
-  <hr class="my-3"/>
+  <hr class="my-3 mx-2" id="dividerBannerAndTable"/>
   <div class="col-8">
     <table
       class="table"
@@ -16,25 +16,25 @@
     >
       <thead id="theadTableVehicles">
         <tr>
-          <th class="h5">#</th>
-          <th class="h5">Marca</th>
-          <th class="h5">Línea</th>
-          <th class="h5">Modelo</th>
+          <th class="h5" id="theadVehicleId">#</th>
+          <th class="h5" id="theadVehicleBrand">Marca</th>
+          <th class="h5" id="theadVehicleLine">Línea</th>
+          <th class="h5" id="theadVehicleModel">Modelo</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let vehicle of vehicles">
+        <tr class="trbody" *ngFor="let vehicle of vehicles">
           <td>
-            <dd id="vehicleId">{{vehicle.id}}</dd>
+            <dd id="vehicleId" class="id">{{vehicle.id}}</dd>
           </td>
           <td>
-            <dd id="vehicleBrand">{{vehicle.marca}}</dd>
+            <dd id="vehicleBrand" class="brand">{{vehicle.marca}}</dd>
           </td>
           <td>
-            <dd id="vehicleLine">{{vehicle.linea}}</dd>
+            <dd id="vehicleLine" class="line">{{vehicle.linea}}</dd>
           </td>
           <td>
-            <dd id="vehicleModel">{{vehicle.modelo}}</dd>
+            <dd id="vehicleModel" class="model">{{vehicle.modelo}}</dd>
           </td>
         </tr>
       </tbody>
@@ -45,7 +45,7 @@
   </div>
 </div>
 
-<div class="row" id="footer">
+<div class="row mt-5" id="footer">
   <p>Contact us: +57 3102105253 - info@tusegundazo.com - @tusegundazo</p>
 </div>
 

@@ -20,6 +20,11 @@
 
 #dividerLogoAndBanner {
   box-shadow: 1px 3px 5px black;
+  width: 98.7%;
+}
+
+#dividerBannerAndTable {
+  width: 98.7%;
 }
 
 .total {
